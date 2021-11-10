@@ -22,22 +22,19 @@ Using natural language processing to express the sentiment of all quotes, our pr
 
 Because our model might classify more quotes as neutral than either clearly positive or negative, one way of accentuating the positivity classification of the authors would be, using either web scraping or the wikidata API.
 
-
-We would like to also use 3 additional datasets: DATASET 1 2 3
+We will use an additionnal dataset containing important dates and events that might have had effect on the morale of the speakers.
 
 ## Methods
 
-### Web scraping
-Using the web-api we created a mapping between the occupations code and the english translation of the profession. 
 ### Sentiment analysis
 One of the possible methods would be to use in the first place the VADER (Valence Aware Dictionary and sEntiment Reasoner) program to obtain a first evaluation of all quotes, and in the case of unsatisfying results we could implement our own NLP model based on the BERT pipeline.
+
 
 https://github.com/cjhutto/vaderSentiment
 
   
 
-We will perform distributions test
-
+TODO sur les speakers et dates 
   
 
 ## Timeline & Milestones
