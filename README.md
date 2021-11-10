@@ -46,45 +46,19 @@ We decided to split the timeline into 3 sub-milestones.
 - **10th of December**: This is a milestone where our project should be almost completed. We should have a webpage with the wanted visualizations. The mathematical analysis should be completed. The notebook should also be finalized.
 
 - **17th of December**: Final deadline milestone. We will need to finish the webpage, tweak the last visualizations, update and finalize the readme (add the collaboration of each member for example), complete the remaining details.
-
-@startmermaid
-
-sequenceDiagram
-
-12.11 ->> 25.11: A1 : Create website skeleton
-
-12.11 ->> 25.11: A2: Create first visualizations
-
-12.11 ->> 25.11: A3: Complete the notebook
-
-12.11 ->> 25.11: A4: Prepare & clean the datasets
-
+<div align="center">  
   
+| |  25.11 | 10.12  |  17.12 |   
+|---|---|---|---|
+|  Maxime |  Create website skeleton | Complete the visualizations <br> and integrate them to the website| Complete math analysis  |
+|  Loïc |  Create first visualizations| Complete the visualizations <br> and integrate them to the website|  Complete math analysis |
+| Jo  |   Prepare & clean the datasets |  Complete math analysis|  Finalize Webpage Visualisations <br> and details  |
+| Xavier  | Complete the notebook  |  Finalize the notebook| Finalize Webpage Visualisations <br> and details |
 
-25.11 ->> 10.12: A1 & A4: Complete the visualizations
+</div>
 
-25.11 ->> 10.12: and integrate them to the website
 
-  
 
-25.11 ->> 10.12: A2: Complete math analysis
-
-25.11 ->> 10.12: A3: Finalize the notebook
-
-  
-  
-
-10.12 ->> 17.12: A1 & A4: Finalize Webpage Visualisations
-
-10.12 ->> 17.12: and details
-
-10.12 ->> 17.12: A2: Complete Git Readme
-
-10.12 ->> 17.12: A3: do smthing
-
-  
-
- @endmermaid
   
   
 
