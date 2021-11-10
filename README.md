@@ -47,7 +47,7 @@ We decided to split the timeline into 3 sub-milestones.
 
 - **17th of December**: Final deadline milestone. We will need to finish the webpage, tweak the last visualizations, update and finalize the readme (add the collaboration of each member for example), complete the remaining details.
 
-```mermaid
+@startmermaid
 
 sequenceDiagram
 
@@ -86,7 +86,7 @@ sequenceDiagram
 
 ```
 
-  
+ @endmermaid
   
   
 
