@@ -6,7 +6,7 @@
 
 ## Abstract
 
-Using natural language processing to express the sentiment of all quotes, our project focuses on analyzing the happiness level of a subset of authors over a period of time. We  then dive on a specific set of speakers that are working in a similar field, and try to observe how historical events/dates impacted the positivity levels expressed in their quotes. We aims to help understand how much a population, a small crowd, or even an individual can been impacted by important events such an economic crisis, pandemics or to study how some domains, subjects such as ecology are percieved by the population across the years. 
+Using natural language processing to express the sentiment of all quotes, our project focuses on analyzing the happiness level of a subset of authors over a period of time. We  then dive on a specific set of speakers that are working in a similar field, and try to observe how historical events/dates impacted the positivity levels expressed in their quotes. We aims to help understand how much a population, a small crowd, or even an individual can been impacted by important events such an economic crisis, pandemics, as well as more light-hearted periods like Christmas or even to study how some domains, subjects such as ecology are percieved by the population across the years.
 
   
 
