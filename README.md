@@ -6,14 +6,14 @@
 
 ## Abstract
 
-Using natural language processing to express the sentiment of all quotes, our project aims to analyze the happiness level of a subset of authors over a period of time. We will then focus on a specific set of authors that are working in a similar field, and try to observe how historical events/dates impacted the positivity levels expressed in their quotes.  Our project will help understanding how much a population has been impacted by some of the biggest catastrophe such as economics crisis or pandemics, as well as positive events like 
+Using natural language processing to express the sentiment of all quotes, our project aims to analyze the happiness level of a subset of authors over a period of time. We will then focus on a specific set of authors that are working in a similar field, and try to observe how historical events/dates impacted the positivity levels expressed in their quotes.  Our project will help understand how much a population, a small crowd, or even an individual has been impacted by some of the biggest catastrophe such as economic crisis and pandemics and how long did it take them to recover and reach their regular level of happiness.  
 
   
 
 ## Research Questions
 
 - Is there a link between jobs mental state
-- How does  the positivity of the speakers evoluate over a given period of time
+- How does  the positivity of the speakers evaluate over a given period of time
 - Can we correlate the positivity changes of different professions speakers such as medical workers, finance workers, and climate activists with multiple history events such as the COVID19 pandemic, the subprime crisis, or global warming.
 - In the case of quotes that are classified as neutral, how could we accentuate the positivity evaluation.
 
@@ -22,11 +22,11 @@ Using natural language processing to express the sentiment of all quotes, our pr
 ## Additional datasets
 
 
-We will use an additionnal dataset containing important dates and events that might have had effect on the morale of the speakers. Because we did not find so far a satisfying dataset, we decided to create it ourselve using web-scraping and make sure to enrich it manually if it is lacking data.  One possibility to obtain such a dataset could be by processing the headline of several newspaper over the wanted period of time, or scrape various websites that contains important events and dates.  
+We will use an additional dataset containing important dates and events that might have had an effect on the morale of the speakers. Because we did not find so far a satisfying dataset, we decided to create it ourselves using web-scraping and make sure to enrich it manually if it is lacking data.  One possibility to obtain such a dataset could be by processing the headline of several newspapers over the wanted period of time, or scrape various websites that contain important events and dates.  
 
 
 
-https://en.wikipedia.org/wiki/Timeline_of_the_21st_century
+https://en.wikipedia.org/wiki/Timeline_of_the_21st_century<br/>
 https://eu.usatoday.com/story/money/2020/09/06/the-worlds-most-important-event-every-year-since-1920/113604790/
 
 ## Methods
@@ -73,3 +73,6 @@ We decided to arrange 2 minor milestones before the final deadline of the projec
 ## Questions
 
 - Can we drop the probability column ?
+
+
+
