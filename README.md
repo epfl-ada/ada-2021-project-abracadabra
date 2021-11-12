@@ -6,7 +6,7 @@
 
 ## Abstract
 
-Using natural language processing to express the sentiment of all quotes, our project focuses on analyzing the happiness level of a subset of authors over a period of time. We  then dive on a specific set of speakers that are working in a similar field, and try to observe how historical events/dates impacted the positivity levels expressed in their quotes. We aim to help understand how much a population, a small crowd, or even an individual can been impacted by important events such an economic crisis, pandemics, as well as more light-hearted periods like Christmas or even to study how some domains or subjects such as ecology are percieved by the population across the years.
+Using natural language processing to express the sentiment of all quotes, our project focuses on analyzing the happiness level of a subset of authors over a period of time. We then dive on a specific set of speakers that are working in a similar field, and try to observe how historical events/dates impacted the positivity levels expressed in their quotes. We aim to help understand how much a population, a small crowd, or even an individual can be impacted by important events such an economic crisis, pandemics, as well as more light-hearted periods like Christmas or even to study how some domains or subjects such as ecology are percieved by the population across the years.
 
   
 
@@ -21,7 +21,7 @@ Using natural language processing to express the sentiment of all quotes, our pr
 
 ## Additional datasets
 
-We plan to use additional dataset containing important dates and events that might have had an effect on the morale of the speakers. Because we did not find so far a satisfying dataset, we think it could be possible to create it ourselves using web-scraping and make sure to enrich it manually if it is lacking data. One possibility to obtain such a dataset could be by processing the headline of several newspapers over the wanted period of time, or scrape various websites that contain important events and dates.
+We plan to use additional dataset containing important dates and events that might have had an effect on the moral of the speakers. Because we did not find so far a satisfying dataset, we think it could be possible to create it ourselves using web-scraping and make sure to enrich it manually if it is lacking data. One possibility to obtain such a dataset could be by processing the headline of several newspapers over the desired period of time, or scrape various websites that contain important events and dates.
 
 https://en.wikipedia.org/wiki/Timeline_of_the_21st_century<br/>
 https://eu.usatoday.com/story/money/2020/09/06/the-worlds-most-important-event-every-year-since-1920/113604790/
@@ -31,19 +31,19 @@ Also, it could help us to find a dataset that groups occupations and domains but
 ## Methods
 
 ### Preprocessing
-For the preprocessing, the first step was to choose which feature to keep or drop from the quotes dataset.
+For the preprocessing, the first step was to choose which features to keep or drop from the quotes dataset.
 Since our questions focus on 2 main aspects, occupations and dates, we process the quotes such that we only keep the date, numOccurences, qids, quotation, quoteID and the speaker.
 The phase, probas and URL are not needed for our project and thus we decided to remove them.
 You can find our detailed thoughts and explanations about why we keep or drop the features in the notebook.
 
-From this, we add another layer of preprocessing. When we work with the professions, we need the speaker in order to retrieve its occupations. Thus, we also create another dataset containing only the quotes that have a speaker (i.e removing the ones that have speaker equal to None). EXPLAIN ??
+From this, we add another layer of preprocessing. When we work with the professions, we need the speaker in order to retrieve its occupations. Thus, we also create another dataset containing only the quotes that have a speaker (i.e removing the ones that have speaker equal to None). The Quotebanks dataset is formed in a way such that the speaker is the one with the highest probability but it sometimes is the case that it didn not find any speaker related to a quote hence the highest probability is none. In those cases, there may be a probability that is is a real speaker who made the quote but as it is less sure than 50% than it is really him we decided to drop those values. We already have a lot of data and we do not want to risk adding wrong entries in it. EXPLAIN ??
 
 We also had to link speakers to their occupations (not just QID from wikidata) and for this we used the speaker_attributes files as well as wikidata_labels_descriptions in order to create a dictionary of QIDS and jobs.
 
 ### Sentiment analysis
 One of the possible methods would be to use in the first place the VADER (Valence Aware Dictionary and sEntiment Reasoner : https://github.com/cjhutto/vaderSentiment) program to obtain a first evaluation of all quotes, and in the case of unsatisfying results, for example in the case VADER classifies the majority of our quotes as neutral,  we could implement our own NLP model based on the BERT pipeline.
 
-Due to the huge number of different occupations in the data, we have to find a way to group the jobs together. Again, we could use NLP to help us clustering the jobs based on their description, making it easier to group the quotes by the occupations of their speakers. We also have other ideas such as using the wikidata structure to use the superclass/supergroup of the professions instead of focusing on the detailed one given in the dataset initially.
+Due to the huge number of different occupations in the data, we have to find a way to group the jobs together. Again, we could use NLP to help us clustering the jobs based on their description, making it easier to group the quotes by the occupations of their speakers. We also have other ideas such as using the wikidata structure to use the superclass/supergroup of the professions instead of focusing on the detailed one given in the dataset initially. To assess the feasability of such a clustering we already experienced with kmeans and we have seen promising results, we should be able to find a good clustering with a more fine tune model.
 
   
 ## Timeline & Milestones
@@ -75,3 +75,4 @@ We decided to arrange 2 minor milestones before the final deadline of the projec
 ## Questions
 
 - Can we drop the probability column ?
+- As we want to focus on different group of speaker like medical workers, finance workers or climat activist for example, shall we focus on just clustering those kind of group hence having a more query like approach in forming them. Or we try to do clustering on the whole dataset as mentioned before hence having a lot of cluster and maybe less precise ones.
