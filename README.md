@@ -49,9 +49,9 @@ Due to the huge number of different occupations in the data, we have to find a w
 
 We decided to arrange 2 minor milestones before the final deadline of the project.
 
-- **25th of November**: The goal would be to have achieved sentiment analysis on all quotes, having a skeleton of the webpage presenting first visualizations results and have our datasets cleaned and analyzed. The notebook writing should be almost finished.
+- **25th of November**: The goal would be to have achieved and studied our first model for the sentiment analysis on all quotes, having a skeleton of the webpage presenting first visualizations results and have our datasets cleaned and analyzed.
 
-- **10th of December**: This is a milestone where our project should be almost completed. We should have a webpage with the wanted visualizations. The mathematical analysis should be completed. The notebook should also be finalized.
+- **10th of December**: This is a milestone where our project should be almost completed. We should have a webpage with the wanted visualizations. The notebook should be finalized, meaning that our sentiment analysis model has to be defined and that we are able to answer general concepts of our research questions.
 
 - **17th of December**: Final deadline milestone. We will need to finish the webpage, tweak the last visualizations details, update and finalize the readme (add the collaboration of each member for example), complete the webpage project description. Solve remaining problems. 
 
@@ -59,10 +59,10 @@ We decided to arrange 2 minor milestones before the final deadline of the projec
   
 | |  25.11 | 10.12  |  17.12 |   
 |---|---|---|---|
-|  Maxime |  Create website skeleton | Complete the visualizations <br> and integrate them to the website| Complete math analysis  |
+|  Maxime |  Create website skeleton | Complete the visualizations <br> and integrate them to the website| Solve remaining problems |
 |  Loïc |  Create first visualizations| Complete the visualizations <br> and integrate them to the website|  Complete & finalize the readme |
-| Jonathan  |   Prepare & clean the datasets |  Complete math analysis|  Finalize Webpage Visualisations <br> and details  |
-| Xavier  | Complete the notebook  |  Finalize the notebook| Finalize Webpage Visualisations <br> and details |
+| Jonathan  |   Prepare & clean the datasets |  Complete NLP model |  Finalize Webpage Visualisations <br> and details  |
+| Xavier  | Work on the notebook and define NLP models ideas |  Finalize the notebook and use of occupations | Finalize Webpage Visualisations <br> and details/descriptions |
 
 </div>
 
@@ -73,5 +73,5 @@ We decided to arrange 2 minor milestones before the final deadline of the projec
 
 ## Questions
 
-- Can we drop the probability column ?
+- We decided to not use the probabilities of speaker in our project and explained why. Is this a valid assumption allowing us to drop this feature or should we take it into acount ?
 - As we want to focus on different group of speaker like medical workers, finance workers or climat activist for example, shall we focus on just clustering those kind of group hence having a more query like approach in forming them. Or we try to do clustering on the whole dataset as mentioned before hence having a lot of cluster and maybe less precise ones.
