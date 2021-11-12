@@ -1,6 +1,6 @@
 
 
-# Showing social sentiment and perceptions using quotes
+# Studying social sentiment and perceptions using quotes
 
   
 
