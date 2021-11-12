@@ -12,9 +12,9 @@ Using natural language processing to express the sentiment of all quotes, our pr
 
 ## Research Questions
 
-- Is there a link between ones profession and their mental state (positivity, negativity) ?
-- How does the sentiment of a speaker changes over a given period of time ?
-- Can we correlate the positivity changes of different professions speakers such as medical workers, finance workers, and climate activists with multiple history events such as the COVID19 pandemic, the subprime crisis, or global warming ?
+- Is there a link between one's profession and their mental state (positivity, negativity) ?
+- How does the sentiment of a speaker change over a given period of time ?
+- Can we correlate the positivity changes of different speakers' professions such as medical workers, finance workers, and climate activists with multiple history events such as the COVID19 pandemic, the subprime crisis, or global warming ?
 - In the case of quotes that are classified as neutral, how could we accentuate the positivity evaluation ?
 
   
@@ -38,7 +38,7 @@ You can find our detailed thoughts and explanations about why we keep or drop th
 
 From this, we add another layer of preprocessing. When we work with the professions, we need the speaker in order to retrieve its occupations. Thus, we also create another dataset containing only the quotes that have a speaker (i.e removing the ones that have speaker equal to None). EXPLAIN ??
 
-We also had to link speakers to their occupations (not just QID from wikidata) and for this we used the speaker_attributes files as well as wikidata_labels_descriptions in order to create a dictionnary of QIDS and jobs.
+We also had to link speakers to their occupations (not just QID from wikidata) and for this we used the speaker_attributes files as well as wikidata_labels_descriptions in order to create a dictionary of QIDS and jobs.
 
 ### Sentiment analysis
 One of the possible methods would be to use in the first place the VADER (Valence Aware Dictionary and sEntiment Reasoner : https://github.com/cjhutto/vaderSentiment) program to obtain a first evaluation of all quotes, and in the case of unsatisfying results, for example in the case VADER classifies the majority of our quotes as neutral,  we could implement our own NLP model based on the BERT pipeline.
