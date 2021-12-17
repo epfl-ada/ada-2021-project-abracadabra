@@ -11,7 +11,7 @@ Using natural language processing to express the sentiment of quotes, our projec
 ## Research Questions
 
 - How does the sentiment fluctuates over the years, over a period of time ?
-- Can we correlate the positivity changes of different speakers' professions such as medical workers, finance workers, and climate activists with multiple history events such as the COVID19 pandemic, the subprime crisis, or an environmental disaster ?
+- Can we correlate the positivity changes of different speakers' professions such as medical workers, finance workers, and climate activists with multiple history events such as the COVID19 pandemic, the subprimes crisis, or an environmental disaster ?
 - Is there a link between one's profession and their mental state (positivity, negativity) ?
 
 ## Methods
