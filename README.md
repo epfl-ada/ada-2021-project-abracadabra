@@ -40,6 +40,9 @@ You can find all of our work in the following notebook : [here](./PreprocessingA
 - Time_Notebook.ipynb : The notebook containing all the analysis of the quotes over the years.
 - Sentiment analysis.ipynb : The notebook containing all the analysis done for the sentiment analysis.
 
+## Data Story
+You can find our Data Story [here](https://ada-abracadabra.github.io/DataStory/)
+
 ## Contribution
 - Maxime : Sentiment analysis and visualization.
 - Loïc : Data exploration and clustering the speaker.
