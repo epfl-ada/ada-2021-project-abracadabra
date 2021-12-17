@@ -1,32 +1,20 @@
 
 
-# Studying social sentiments and perceptions using quotes
+# Studying social sentiments of people from different work fields over time using quotes
 
   
 
 ## Abstract
 
-Using natural language processing to express the sentiment of all quotes, our project focuses on analyzing the happiness level of a subset of authors over a period of time. We then dive on a specific set of speakers that are working in a similar field, and try to observe how historical events/dates impacted the positivity levels expressed in their quotes. We aim to help understand how much a population, a small crowd, or even an individual can be impacted by important events such an economic crisis, pandemics, as well as more light-hearted periods like Christmas or even to study how some domains or subjects such as ecology are percieved by the population across the years.
-
+Using natural language processing to express the sentiment of all quotes, our project focuses on analyzing the happiness level of a subset of authors over a period of time. We then dive on a specific set of speakers that are working in a similar field, and try to observe how historical events/dates impacted the positivity levels expressed in their quotes. Indeed we would expect that some events will impact more strongly specific field than others. We could choose important event like pandemics (H1N1 and covid) which are expected to impact negatively the sentiment of the medical field, the subprimes crisis which would negatively impact the economy or an ecological disaster like Fukushima would have a bad impact on the environmental group. Those kind of event are chosen because they had a huge impact and have been in the center of many discussions.
   
-
 ## Research Questions
 
 - Is there a link between one's profession and their mental state (positivity, negativity) ?
 - How does the sentiment of a speaker change over a given period of time ?
-- Can we correlate the positivity changes of different speakers' professions such as medical workers, finance workers, and climate activists with multiple history events such as the COVID19 pandemic, the subprime crisis, or global warming ?
+- Can we correlate the positivity changes of different speakers' professions such as medical workers, finance workers, and climate activists with multiple history events such as the COVID19 pandemic, the subprime crisis, or environmental disaster ?
 - In the case of quotes that are classified as neutral, how could we accentuate the positivity evaluation ?
 
-  
-
-## Additional datasets
-
-We plan to use additional dataset containing important dates and events that might have had an effect on the moral of the speakers. Because we did not find so far a satisfying dataset, we think it could be possible to create it ourselves using web-scraping and make sure to enrich it manually if it is lacking data. One possibility to obtain such a dataset could be by processing the headline of several newspapers over the desired period of time, or scrape various websites that contain important events and dates.
-
-https://en.wikipedia.org/wiki/Timeline_of_the_21st_century<br/>
-https://eu.usatoday.com/story/money/2020/09/06/the-worlds-most-important-event-every-year-since-1920/113604790/
-
-Also, it could help us to find a dataset that groups occupations and domains but we may need to create it ourselves. We explain this part more precisely in the next section.
 
 ## Methods
 
@@ -40,10 +28,22 @@ From this, we add another layer of preprocessing. When we work with the professi
 We also had to link speakers to their occupations (not just QID from wikidata) and for this we used the speaker_attributes files as well as wikidata_labels_descriptions in order to create a dictionary of QIDS and jobs.
 
 ### Sentiment analysis
-One of the possible methods would be to use in the first place the VADER (Valence Aware Dictionary and sEntiment Reasoner : https://github.com/cjhutto/vaderSentiment) program to obtain a first evaluation of all quotes, and in the case of unsatisfying results, for example in the case VADER classifies the majority of our quotes as neutral,  we could implement our own NLP model based on the BERT pipeline.
+We used several Sentiment analysis models. The main one we ended up using was VADER (Valence Aware Dictionary and sEntiment Reasoner : https://github.com/cjhutto/vaderSentiment). After Testing other models (TextBlob, Bert https://huggingface.co/siebert/sentiment-roberta-large-english)  and tried many combination of them, we decided to stick with VADER as it gave the best evaluations over many different quotes we tested. The completeness of the Vader model allowed us to compare the negativity, positivity and compound of the quotes over many years and over several different clusters.
 
-Due to the huge number of different occupations in the data, we have to find a way to group the jobs together. Again, we could use NLP to help us clustering the jobs based on their description, making it easier to group the quotes by the occupations of their speakers. We also have other ideas such as using the wikidata structure to use the superclass/supergroup of the professions instead of focusing on the detailed one given in the dataset initially. To assess the feasability of such a clustering we already experienced with kmeans and we have seen promising results, we should be able to find a good clustering with a more fine tune model.
+### Clustering
+We use a TF IDX matrix vectorizer and then K-means for the clustering. Clustering was a big challenge in our project as it was a way harder task than expected, the proffesion are so diversified and the description are really general which makes it hard to form meaningful cluster. We were able to form some good cluster and decided to then group all the cluster that didn't make sens into one again and then filter it using a list of words to make an economy and ecology cluster appear. Leaving a big part of profession in a trash cluster as they did not interest us for this project.
 
+## Notebooks
+- PreprocessingAndClustering.ipynb : The notebook containing the preprocessing and the clustering of speaker in their respetive field.
+- Time_Notebook.ipynb : The notebook containing all the analysis of the quotes over the years.
+- Sentiment analysis.ipynb : The notebook containing all the analysis done for the sentiment analysis.
+
+
+## Contribution
+- Maxime : Testing and computing the data for the sentiment analysis.
+- Loïc : Data exploration and clustering the speaker.
+- Jonathan : Data exploration and plotting the number of quotes over the year.
+- Xavier : Coming up with the NLP method to use and plotting the sentiment analysis.
   
 ## Timeline & Milestones
 
@@ -60,18 +60,9 @@ We decided to arrange 2 minor milestones before the final deadline of the projec
 | |  25.11 | 10.12  |  17.12 |   
 |---|---|---|---|
 |  Maxime |  Create website skeleton | Complete the visualizations <br> and integrate them to the website| Solve remaining problems |
-|  Loïc |  Create first visualizations| Complete the visualizations <br> and integrate them to the website|  Complete & finalize the readme |
-| Jonathan  |   Prepare & clean the datasets |  Complete NLP model |  Finalize Webpage Visualisations <br> and details  |
-| Xavier  | Work on the notebook and define NLP models ideas |  Finalize the notebook and use of occupations | Finalize Webpage Visualisations <br> and details/descriptions |
+|  Loïc |  Test on the clustering| Clustering done with the category needed |  Complete & finalize the readme |
+| Jonathan  |   Prepare & clean the datasets |  Plot for the number of quotes over the years |  Finalize Webpage Visualisations <br> and details  |
+| Xavier  | Test the different sentiment analysis methods |  Finalize the notebook and use of occupations | Finalize Webpage Visualisations <br> and details/descriptions |
 
 </div>
 
-
-
-  
-  
-
-## Questions
-
-- We decided to not use the probabilities of speaker in our project and explained why. Is this a valid assumption allowing us to drop this feature or should we take it into acount ?
-- As we want to focus on different group of speaker like medical workers, finance workers or climat activist for example, shall we focus on just clustering those kind of group hence having a more query like approach in forming them. Or we try to do clustering on the whole dataset as mentioned before hence having a lot of cluster and maybe less precise ones.
