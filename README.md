@@ -6,7 +6,7 @@
 
 ## Abstract
 
-Using natural language processing to express the sentiment of quotes, our project aims to analyze the happiness level of authors over a period of time. We then dive on a specific set of speakers that are working in a similar field, and try to observe how historical events/dates impacted the positivity levels expressed in their quotes. Our idea is that it is possible to observe the impact of events over specific field. For exemple, pandemics (H1N1 and covid) would be expected to increase the negativity of the sentiment express by the medical workers, the subprimes crisis would negatively impact the economy or an ecological disaster like Fukushima should have a bad impact on the environmental group. Such examples are the ones we decided  to work with because they had a real public importance and have been at the center of many discussions.
+Using natural language processing to express the sentiment of quotes, our project aims to analyze the happiness level of authors over a period of time. We then dive on a specific set of speakers that are working in a similar field, and try to observe how historical events/dates impacted the positivity levels expressed in their quotes. Our idea is that it is possible to observe the impact of events over specific field. For example, pandemics (H1N1 and covid) would be expected to increase the negativity of the sentiment express by the medical workers, the subprimes crisis would negatively impact the economy or an ecological disaster like Fukushima should have a bad impact on the environmental group. Such examples are the ones we decided to work with because they had a real public importance and have been at the center of many discussions.
   
 ## Research Questions
 
