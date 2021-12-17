@@ -61,9 +61,9 @@ We decided to arrange 2 minor milestones before the final deadline of the projec
 | |  25.11 | 10.12  |  17.12 |   
 |---|---|---|---|
 |  Maxime |  Create website skeleton | Complete the visualizations <br> and integrate them to the website| Solve remaining problems |
-|  Loïc |  Create first visualizations| Complete the visualizations <br> and integrate them to the website|  Complete & finalize the readme |
-| Jonathan  |   Prepare & clean the datasets |  Complete NLP model |  Finalize Webpage Visualisations <br> and details  |
-| Xavier  | Work on the notebook and define NLP models ideas |  Finalize the notebook and use of occupations | Finalize Webpage Visualisations <br> and details/descriptions |
+|  Loïc |  Test on the clustering| Clustering done with the category needed |  Complete & finalize the readme |
+| Jonathan  |   Prepare & clean the datasets |  Plot for the number of quotes over the years |  Finalize Webpage Visualisations <br> and details  |
+| Xavier  | Test the different sentiment analysis methods |  Finalize the notebook and use of occupations | Finalize Webpage Visualisations <br> and details/descriptions |
 
 </div>
 
