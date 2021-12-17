@@ -28,17 +28,16 @@ From this, we add another layer of preprocessing. When we work with the professi
 We also had to link speakers to their occupations (not just QID from wikidata) and for this we used the speaker_attributes files as well as wikidata_labels_descriptions in order to create a dictionary of QIDS and jobs.
 
 ### Sentiment analysis
-One of the possible methods would be to use in the first place the VADER (Valence Aware Dictionary and sEntiment Reasoner : https://github.com/cjhutto/vaderSentiment) program to obtain a first evaluation of all quotes, and in the case of unsatisfying results, for example in the case VADER classifies the majority of our quotes as neutral,  we could implement our own NLP model based on the BERT pipeline.
-
-Due to the huge number of different occupations in the data, we have to find a way to group the jobs together. Again, we could use NLP to help us clustering the jobs based on their description, making it easier to group the quotes by the occupations of their speakers. We also have other ideas such as using the wikidata structure to use the superclass/supergroup of the professions instead of focusing on the detailed one given in the dataset initially. To assess the feasability of such a clustering we already experienced with kmeans and we have seen promising results, we should be able to find a good clustering with a more fine tune model.
+We used several Sentiment analysis models. The main one we ended up using was VADER (Valence Aware Dictionary and sEntiment Reasoner : https://github.com/cjhutto/vaderSentiment). After Testing other models (TextBlob, Bert https://huggingface.co/siebert/sentiment-roberta-large-english)  and tried many combination of them, we decided to stick with VADER as it gave the best evaluations over many different quotes we tested. The completeness of the Vader model allowed us to compare the negativity, positivity and compound of the quotes over many years and over several different clusters.
 
 ### Clustering
 We use a TF IDX matrix vectorizer and then K-means for the clustering. Clustering was a big challenge in our project as it was a way harder task than expected, the proffesion are so diversified and the description are really general which makes it hard to form meaningful cluster. We were able to form some good cluster and decided to then group all the cluster that didn't make sens into one again and then filter it using a list of words to make an economy and ecology cluster appear. Leaving a big part of profession in a trash cluster as they did not interest us for this project.
 
-## Notebook
+## Notebooks
 - PreprocessingAndClustering.ipynb : The notebook containing the preprocessing and the clustering of speaker in their respetive field.
 - Time_Notebook.ipynb : The notebook containing all the analysis of the quotes over the years.
 - Sentiment analysis.ipynb : The notebook containing all the analysis done for the sentiment analysis.
+
 
 ## Contribution
 - Maxime : Testing and computing the data for the sentiment analysis.
